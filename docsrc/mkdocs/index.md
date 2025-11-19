@@ -1,7 +1,7 @@
 ---
 title: Home
 ---
-# Create Introductions Issues 0.6.0.dev0 Documentation
+# Create Introductions Issues 0.7.0.dev0 Documentation
 
 This is the documentation for Create Introductions Issues. All the Markdown (`md`) files in
 `./docsrc/mkdocs` become the documentation pages.

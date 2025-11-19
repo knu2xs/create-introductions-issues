@@ -36,9 +36,9 @@ SET CONDA_DIR="%~dp0env"
 :: Jump to command
 GOTO %1
 
-:: Perform data preprocessing steps contained in the make_data.py script.
-:data
-    CALL conda run -p %CONDA_DIR% python scripts/make_data.py
+:: Perform steps contained in the scripts/make_introduction_issues.py script.
+:issues
+    CALL conda run -p %CONDA_DIR% python scripts/make_introduction_issues.py
     GOTO end
 
 :: Make documentation using MkDocs!
@@ -54,14 +54,7 @@ GOTO %1
 :: Build the local environment from the environment file
 :env
     :: Create new environment from environment file
-    CALL conda create -p %CONDA_DIR% --clone "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3"
-    GOTO add_dependencies
-
-:: Add python dependencies from environment.yml to the project environment
-:add_dependencies
-        
-    :: Add more fun stuff from environment file
-    CALL conda env update -p %CONDA_DIR% -f environment.yml
+    CALL conda env create -p %CONDA_DIR% -f environment.yml
 
     :: Install the local package in development (experimental) mode
     CALL conda run -p %CONDA_DIR% python -m pip install -e .
@@ -71,11 +64,6 @@ GOTO %1
 :: Start Jupyter Label
 :jupyter
     CALL conda run -p %CONDA_DIR% python -m jupyterlab --ip=0.0.0.0 --allow-root --NotebookApp.token=""
-    GOTO end
-
-:: Make *.pyt zipped archive with requirements
-:pytzip
-    CALL conda run -p %CONDA_DIR% python -m scripts/make_pyt_archive.py
     GOTO end
 
 :: Make the package for uploading

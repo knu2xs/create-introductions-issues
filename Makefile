@@ -13,8 +13,8 @@ ENV = $(PROJECT_DIR)/env
 #################################################################################
 
 ## Make Dataset
-data:
-	conda run -p "$(ENV)" python scripts/make_data.py
+issues:
+	conda run -p "$(ENV)" python scripts/make_introduction_issues.py
 
 ## Delete all compiled Python files
 clean:

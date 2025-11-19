@@ -8,6 +8,9 @@ site_dir: ../docs
 #   - Home: index.md
 #   - API: api.md
 
+# repo
+repo_url: https://github.com/knu2xs/create-introductions-issues
+
 theme:
   name: material
 
@@ -68,7 +71,8 @@ plugins:
 
   # extension converting included notebooks into html at build time
   - mkdocs-jupyter:
-      include_source: True
+      include_source: false
+      members: true
 
   # extension to include markdown files within other markdown files
   - include-markdown:

@@ -1,5 +1,5 @@
 __title__ = "create-introductions-issues"
-__version__ = "0.7.0.dev0"
+__version__ = "0.8.0.dev0"
 __author__ = "Joel McCune (https://github.com/knu2xs)"
 __license__ = "Apache 2.0"
 __copyright__ = "Copyright 2023 by Joel McCune (https://github.com/knu2xs)"

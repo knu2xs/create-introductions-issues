@@ -10,18 +10,17 @@ Create GitHub issues for all introductions tasks.
 
 ## Getting Started
 
-1 - Clone this repo.
+### 1 - Clone this repo.
 
-2 - Create the contacts CSV file.
-  - location: `./data/raw/contacts.csv`
-  - columns: `name`, `role`
-  - contents: Name of each person, and their title or role description.
+### 2 - Create the contacts CSV file.
+    - location: `./data/raw/contacts.csv`
+    - columns: `name`, `role`
+    - contents: Name of each person, and their title or role description.
 
 !!! note
+    This file will not be included in Git version control. Everything in the `./data` directory is excluded using `.gitignore`.
 
-  This file will not be included in Git version control. Everything in the `./data` directory is excluded using `.gitignore`.
-
-3 - Set repo properties.
+### 3 - Set repo properties.
 
 Set the following variables in `./scripts/config.py`.
 
@@ -30,7 +29,7 @@ github_owner = "your_glorious_self"
 github_repo = "personal-issues"
 ```
 
-3 - Create a Python Conda environment with the requirements.
+### 4 - Create a Python Conda environment with the requirements.
     
 ```
 make env

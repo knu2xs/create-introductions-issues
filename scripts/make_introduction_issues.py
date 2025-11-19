@@ -24,7 +24,7 @@ def get_github_token() -> str | None:
         token = result.stdout.strip()
         return token
     except subprocess.CalledProcessError as e:
-        print("Error retrieving token:", e)
+        print("Error retrieving GitHub token:", e)
         return None
     
 
